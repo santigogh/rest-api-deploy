@@ -1,32 +1,33 @@
-##Recuperartodas las peliculas 
-GET http://localhost:3000/movies
+### Recuperar todas las películas
+GET http://localhost:1234/movies
 
-###Recuperar una pelicula por id 
-GET http://localhost:3000/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+### Recuperar una película por id
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
 
-###Recuperar una pelicula por un genero
-GET http://localhost:3000/movies?genre=action
+### Recuperar todas las películas por un género
+GET http://localhost:1234/movies?genre=ACTION
 
-### Crear una pelicula 
-POST http://localhost:3000/movies
-Content-Type: application/json 
+### Crear una película con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
 
 {
+  "sql": "SELECT * FROM users",
   "title": "The Godfather",
   "year": 1975,
-  "director": "Francis Frod Coppola",
+  "director": "Francis Ford Coppola",
   "duration": 175,
-  "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjkxk1HXZqweCR7dcKnjQEI5ZjKxiyNMUqZxFLE99AQlGM5f9r",
+  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
   "genre": [
     "Crime",
     "Drama"
   ]
 }
 
-###Actualizar una pelicula 
-PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+### Actualizar una película
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 Content-Type: application/json
 
 {
-    "year": 1993
+  "year": 2022
 }
